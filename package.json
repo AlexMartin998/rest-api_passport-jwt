@@ -2,12 +2,12 @@
   "name": "a_a_api-fazt",
   "version": "1.0.0",
   "description": "",
-  "main": "./dist/index.js",
+  "main": "./dist/app.js",
   "scripts": {
-    "start": "node ./dist/index.js",
-    "dev": "tsc-watch --onSuccess \"nodemon ./dist/index.js\"",
-    "dev2": "ts-node-dev ./dist/index.js",
-    "devFH": "nodemon ./dist/index.js",
+    "start": "node ./dist/app.js",
+    "dev": "tsc-watch --onSuccess \"nodemon ./dist/app.js\"",
+    "dev2": "ts-node-dev ./dist/app.js",
+    "devFH": "nodemon ./dist/app.js",
     "build": "tsc"
   },
   "keywords": [],

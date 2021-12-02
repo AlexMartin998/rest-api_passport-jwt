@@ -4,7 +4,7 @@ import {
   StrategyOptions,
 } from 'passport-jwt';
 
-import config from './../config/config';
+import config from '../config/config';
 import { User } from '../models';
 
 const opts: StrategyOptions = {
