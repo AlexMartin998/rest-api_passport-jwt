@@ -1,5 +1,5 @@
-import { app } from './models';
-import './db/db';
+import app from './server';
+import './db/connection';
 
 console.clear();
 

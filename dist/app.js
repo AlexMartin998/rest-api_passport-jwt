@@ -1,8 +1,11 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-const models_1 = require("./models");
-require("./db/db");
+const server_1 = __importDefault(require("./server"));
+require("./db/connection");
 console.clear();
-models_1.app.listen(models_1.app.get('port'), () => {
-    console.log('Server on port', models_1.app.get('port'));
+server_1.default.listen(server_1.default.get('port'), () => {
+    console.log('Server on port', server_1.default.get('port'));
 });
