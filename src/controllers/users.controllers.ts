@@ -67,7 +67,7 @@ export const signIn = async (
   const isMatch = await user.comparePassword(password);
   if (!isMatch) return res.status(401).json({ msg: 'Incorrect password!' });
 
-  const token = createToken(user);
+  const token = `Bearer ${createToken(user)}`;
   // const token = await generateJWT(user);
 
   return res.status(201).json({ msg: 'Log In', token });

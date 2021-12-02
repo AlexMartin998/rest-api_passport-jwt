@@ -61,7 +61,7 @@ const signIn = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const isMatch = yield user.comparePassword(password);
     if (!isMatch)
         return res.status(401).json({ msg: 'Incorrect password!' });
-    const token = createToken(user);
+    const token = `Bearer ${createToken(user)}`;
     return res.status(201).json({ msg: 'Log In', token });
 });
 exports.signIn = signIn;
