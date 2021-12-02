@@ -25,5 +25,5 @@ npm run build
 Run generated content in dist/ folder on port 3000
 
 ```bash
-npm run build
+npm run start
 ```
