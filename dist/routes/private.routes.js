@@ -4,9 +4,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = require("express");
-const passport_1 = __importDefault(require("passport"));
+const check_jwt_middlerare_1 = __importDefault(require("./../middlewares/check-jwt.middlerare"));
 const router = (0, express_1.Router)();
-router.get('/private', passport_1.default.authenticate('jwt', { session: false }), (req, res) => {
-    res.status(200).json({ msg: 'Success!' });
+router.get('/private', check_jwt_middlerare_1.default, (req, res) => {
+    res.status(200).json({ msg: 'Success!!!' });
 });
 exports.default = router;
